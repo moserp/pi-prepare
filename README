@@ -1,0 +1,12 @@
+Basic Sprinkle scripts to prepare a Pi instance for futher installations.
+
+Run:
+
+sprinkle -s centos.rb
+
+or:
+
+sprinkle -s ubuntu.rb
+
+as appropriate for the OS. You also need have modifed the file to specify the
+IP address of the instance.
