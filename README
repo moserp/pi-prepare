@@ -10,3 +10,6 @@ sprinkle -s ubuntu.rb
 
 as appropriate for the OS. You also need have modifed the file to specify the
 IP address of the instance.
+
+Note: you should have your own Chef client.rb and validation.pem files present,
+these are not included for obvious reasons.
