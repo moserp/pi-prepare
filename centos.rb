@@ -1,9 +1,11 @@
 require 'common'
 
 policy :centos, :roles => :app do
-  requires :mtu
-  requires :yum_sources
-  requires :chef_client
+#  requires :mtu
+#  requires :hostname
+#  requires :yum_sources
+#  requires :chef_client
+  requires :chef_client_config
 end
 
 package :yum_sources do
@@ -50,7 +52,7 @@ end
 deployment do
   delivery :capistrano do
     set :user, 'root'
-    role :app, '109.144.14.xx', :primary => true
+    role :app, '109.144.14.27', :primary => true
     default_run_options[:pty] = true
   end
   # source based package installer defaults
