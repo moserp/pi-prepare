@@ -1,10 +1,10 @@
 require 'common'
 
 policy :centos, :roles => :app do
-#  requires :mtu
-#  requires :hostname
-#  requires :yum_sources
-#  requires :chef_client
+  requires :mtu
+  requires :hostname
+  requires :yum_sources
+  requires :chef_client
   requires :chef_client_config
 end
 
