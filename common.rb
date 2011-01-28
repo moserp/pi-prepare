@@ -10,6 +10,13 @@ package :hostname do
   end
 end
 
+package :rubygems do
+  source 'http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz' do
+    custom_install 'ruby setup.rb --no-format-executable'
+  end
+  requires :ruby
+end
+
 package :chef_client_config do
   runner 'mkdir -p /etc/chef'
   transfer 'client.rb', '/etc/chef/client.rb'

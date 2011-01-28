@@ -26,13 +26,6 @@ package :ruby do
   requires :elff
 end
 
-package :rubygems do
-  source 'http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz' do
-    custom_install 'ruby setup.rb --no-format-executable'
-  end
-  requires :ruby
-end
-
 package :make do
   yum 'make'
 end
